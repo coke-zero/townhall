@@ -3,21 +3,16 @@ source 'https://rubygems.org'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'pg'
 gem 'puma', '~> 3.0'
+gem 'graphql'
 
 gem 'sass-rails', '~> 5.0'
-gem 'neat'
 gem 'uglifier', '>= 1.3.0'
 
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-gem 'graphql'
-gem 'react-rails'
+gem 'therubyracer'
 gem 'turbolinks', '~> 5'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 3.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'react-rails'
+
+gem 'neat'
 
 group :development, :test do
   gem 'pry-rails'

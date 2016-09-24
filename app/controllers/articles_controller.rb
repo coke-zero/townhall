@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.all
+    result = Graph::Schema.execute(Graph::Queries::Articles).fetch("data")
+
+    render component: 'ArticleList', props: { articles: result["articles"] }
   end
 end
