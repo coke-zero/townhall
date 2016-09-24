@@ -12,7 +12,9 @@ gem 'therubyracer'
 gem 'turbolinks', '~> 5'
 gem 'react-rails'
 
+gem 'bourbon'
 gem 'neat'
+gem 'bitters'
 
 group :development, :test do
   gem 'pry-rails'
