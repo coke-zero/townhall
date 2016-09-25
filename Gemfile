@@ -1,3 +1,4 @@
+ruby '2.3.1'
 source 'https://rubygems.org'
 
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
@@ -34,6 +35,10 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'refills'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
 
 gem 'tzinfo-data'
