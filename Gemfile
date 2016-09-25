@@ -18,6 +18,7 @@ gem 'neat'
 gem 'bitters'
 
 gem 'redcarpet'
+gem 'faker' if ENV["DEVELOPMENT_MODE"] == 'true'
 
 group :development, :test do
   gem 'pry-rails'
