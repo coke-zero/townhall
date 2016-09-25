@@ -1,11 +1,4 @@
 class ArticlesController < ApplicationController
-  def index
-    result = Graph::Schema.execute(Graph::Queries::Articles).fetch("data")
-
-    render component: 'ArticleList', props: { articles: result["articles"] }
-  end
-
-
   def show
     query = <<~GQL
       {
@@ -16,8 +9,6 @@ class ArticlesController < ApplicationController
       }
     GQL
 
-    result = Graph::Schema.execute(query).fetch("data")
-
-    render component: 'Article', props: result
+    @props = Graph::Schema.execute(query).fetch("data")
   end
 end

@@ -18,6 +18,5 @@ class HomeController < ApplicationController
     GQL
 
     @props =  results.fetch("data")
-    render component: "Home", props: results.fetch("data")
   end
 end
