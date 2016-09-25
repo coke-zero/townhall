@@ -1,7 +1,9 @@
 class Article < ApplicationRecord
   validates :title, presence: true
+
   has_many :topic_memberships
   has_many :topics, through: :topic_memberships
+  belongs_to :author, class_name: "User"
 
   def teaser
     body&.truncate(200)

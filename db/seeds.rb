@@ -5,7 +5,7 @@ end
 25.times do
   article = Article.new(
     title: Faker::Book.title,
-    body: Faker::Lorem.paragraph([2..4].sample),
+    body: Faker::Lorem.paragraph([4..8].sample),
   )
 
   article.topics = [topics.sample]
