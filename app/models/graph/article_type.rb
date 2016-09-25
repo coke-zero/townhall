@@ -7,5 +7,14 @@ module Graph
     field :title, !types.String
     field :body, types.String
     field :teaser, types.String
+    field :rendered_body, types.String
+
+    field :url do
+      type !types.String
+
+      resolve ->(article, args, ctx) do
+        Rails.application.routes.url_helpers.article_path(article)
+      end
+    end
   end
 end

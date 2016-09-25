@@ -10,6 +10,7 @@ class Article < ApplicationRecord
   def rendered_body
     renderer = Redcarpet::Render::HTML.new
     markdown = Redcarpet::Markdown.new(renderer, extensions = {})
+
     markdown.render(body)
   end
 end

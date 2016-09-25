@@ -6,6 +6,7 @@ class HomeController < ApplicationController
           id
           title
           teaser
+          url
         }
 
         topics {

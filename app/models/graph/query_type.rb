@@ -3,6 +3,15 @@ module Graph
     name "Query"
     description "The query root of this schema"
 
+    field :article do
+      type ArticleType
+
+      argument :id, !types.ID
+
+      resolve -> (obj, args, ctx) { Article.find(args[:id]) }
+
+    end
+
     field :articles do
       type types[ArticleType]
 

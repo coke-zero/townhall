@@ -23,7 +23,9 @@
     .recent-articles {
       @include span-columns(8);
 
+      background: white;
       border: 1px solid $bg-light-gray;
+      padding: 1rem;
     }
 
     .recent-topics {

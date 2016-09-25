@@ -16,7 +16,9 @@ class Home extends React.Component {
                 articles.map(article => {
                   return(
                     <li key={ article.id }>
-                      <h3>{ article.title}</h3>
+                      <h3>
+                        <a href={ article.url }>{ article.title}</a>
+                      </h3>
                       <p>{ article.teaser }</p>
                     </li>
                   );
