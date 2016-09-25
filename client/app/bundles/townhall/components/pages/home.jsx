@@ -22,6 +22,7 @@ export default class Home extends React.Component {
                       <h3>
                         <a href={ article.url }>{ article.title}</a>
                       </h3>
+                      <p>Written by { article.author.name }</p>
                       <p>{ article.teaser }</p>
                     </li>
                   );

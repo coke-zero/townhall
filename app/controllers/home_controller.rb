@@ -7,6 +7,9 @@ class HomeController < ApplicationController
           title
           teaser
           url
+          author {
+            name
+          }
         }
 
         topics {

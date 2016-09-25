@@ -8,6 +8,7 @@ module Graph
     field :body, types.String
     field :teaser, types.String
     field :rendered_body, types.String
+    field :author, !UserType
 
     field :url do
       type !types.String
