@@ -1,4 +1,7 @@
-class Home extends React.Component {
+import React from "react";
+import ArticleSearch from "../article-search";
+
+export default class Home extends React.Component {
   render() {
     var { articles, topics } = this.props;
 
