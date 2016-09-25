@@ -1,0 +1,19 @@
+@import "variables";
+@import "bourbon";
+@import "neat";
+@import "base/base";
+
+// Pages
+@import "pages/home";
+
+// Refills Scaffolding
+@import "refills/grid-items";
+
+// Components
+@import "components/article-search";
+
+
+body {
+  background: #f4f4f4;
+  margin: 0;
+}

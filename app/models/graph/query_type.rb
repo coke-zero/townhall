@@ -8,5 +8,13 @@ module Graph
 
       resolve -> (obj, args, ctx) { Article.all }
     end
+
+    field :topics do
+      type types[TopicType]
+
+      resolve -> (obj, args, ctx) do
+        Topic.all
+      end
+    end
   end
 end

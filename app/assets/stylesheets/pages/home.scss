@@ -1,0 +1,43 @@
+.home {
+  h1 {
+    text-align: center;
+  }
+
+  .search {
+    padding: 2rem;
+    background: white;
+
+    > div {
+      @include outer-container;
+      input {
+        margin: 0;  // FIXME hacking the input
+      }
+    }
+  }
+
+  .content {
+    @include outer-container;
+
+    margin-top: 2rem;
+
+    .recent-articles {
+      @include span-columns(8);
+
+      border: 1px solid $bg-light-gray;
+    }
+
+    .recent-topics {
+      @include outer-container;
+      @include span-columns(4);
+
+      .topic {
+        @include span-columns(12);
+
+        background: white;
+        border: 1px solid $bg-light-gray;
+        padding: 1rem;
+        margin: 0.5rem auto;
+      }
+    }
+  }
+}
