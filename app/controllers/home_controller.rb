@@ -12,7 +12,7 @@ class HomeController < ApplicationController
           }
         }
 
-        topics {
+        topics: recent_topics {
           id
           name
           articlesCount

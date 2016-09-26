@@ -8,7 +8,11 @@ module Graph
     field :body, types.String
     field :teaser, types.String
     field :rendered_body, types.String
-    field :author, !UserType
+    field :author, -> { !UserType } do
+      resolve -> (article, args, ctx) do
+        RecordLoader.for(User).load(article.author_id)
+      end
+    end
 
     field :url do
       type !types.String

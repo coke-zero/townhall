@@ -18,11 +18,11 @@ module Graph
       resolve -> (obj, args, ctx) { Article.all }
     end
 
-    field :topics do
+    field :recent_topics do
       type types[TopicType]
 
       resolve -> (obj, args, ctx) do
-        Topic.all
+        Topic.recent
       end
     end
   end
