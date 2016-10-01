@@ -7,6 +7,7 @@ gem 'puma', '~> 3.0'
 
 gem 'graphql'
 gem 'graphql-batch', require: 'graphql/batch'
+gem 'graphql-client'
 
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -14,7 +15,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'turbolinks', '~> 5'
 gem 'react-rails'
 gem 'react_on_rails'
-gem 'mini_racer', platforms: :ruby
+gem 'therubyracer'
 
 gem 'bourbon'
 gem 'neat'

@@ -1,25 +1,25 @@
 class HomeController < ApplicationController
-  def index
-    results = Graph::Schema.execute <<~GQL
-      query {
-        articles {
-          id
-          title
-          teaser
-          url
-          author {
-            name
-          }
-        }
-
-        topics: recent_topics {
-          id
+  HomeQuery = Graph::Client.parse <<~GQL
+    query {
+      articles {
+        id
+        title
+        teaser
+        url
+        author {
           name
-          articlesCount
         }
       }
-    GQL
 
-    @props =  results.fetch("data")
+      topics: recent_topics {
+        id
+        name
+        articlesCount
+      }
+    }
+  GQL
+
+  def index
+    @props = Graph::Client.query(HomeQuery).data.to_h
   end
 end

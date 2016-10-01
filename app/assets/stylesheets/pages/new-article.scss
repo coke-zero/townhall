@@ -1,0 +1,35 @@
+.new-article {
+  @include outer-container;
+
+  .top-bar {
+    @include outer-container;
+
+    .title {
+      @include span-columns(10);
+    }
+
+    .save {
+      @include span-columns(2);
+      button {
+        width: 100%;
+      }
+    }
+  }
+
+  .editor, .preview {
+    @include span-columns(6);
+    height: 100vh;
+  }
+
+  .editor {
+    textarea {
+      height: 100vh;
+    }
+  }
+
+  .preview {
+    padding: 1rem;
+    background: white;
+    border: 1px solid $bg-light-gray;
+  }
+}
