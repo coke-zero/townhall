@@ -46,3 +46,4 @@ end
 
 gem 'tzinfo-data'
 
+gem 'nokogiri', '>= 1.7.2'
